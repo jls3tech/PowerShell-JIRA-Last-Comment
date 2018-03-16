@@ -31,8 +31,11 @@ function Get-Data([string]$username, [string]$password, [string]$url) {
 }
 
 #Stuff
-##User Name
+##User Name in corporate environments
 $username = $env:UserName
+
+#Otherswise, type it in.
+#$username = Read-Host "Enter Username" 
 
 ##Password Handling
 $SecurePassword = Read-Host "Enter Pass" -AsSecureString
