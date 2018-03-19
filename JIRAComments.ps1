@@ -66,7 +66,6 @@ $joinedObject = foreach ($jid in $ticketArray){
             [pscustomobject]@{IssueID = $jid; Comment = "No Recorded Comment";} | Write-Output
             }
         else{
-            [pscustomobject]@{IssueID = $jid; Comment = $data;} | Write-Output
             }
         }
     catch { 
